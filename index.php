@@ -35,10 +35,10 @@ function get_details($url){
     $description = str_replace("\n", "", $description);
     $keywords = str_replace("\n", "", $keywords);
 
-    return '{ "Titlte": "'.$title
-        .'", "Description": "'.$description
-        .'", "Keywords": "'.$keywords
-        .'", "URL": "'.$url.'" },';
+    echo "URL: ".$url
+        ."\nTitulo: ".$title
+        ."\nKeywords: ".$keywords
+        ."\nDescricao: ".$description."\n\n";
 
 }
 
@@ -102,7 +102,7 @@ function follow_links($url) {
         if(!in_array($l, $already_crawled)){
             $already_crawled[] = $l;
             $crawling[] = $l;
-            echo get_details($l)."\n";
+            get_details($l);
         }
     }
 }
