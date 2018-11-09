@@ -38,7 +38,7 @@ function get_details($url){
     return '{ "Titlte": "'.$title
         .'", "Description": "'.$description
         .'", "Keywords": "'.$keywords
-        .'", URL: "'.$url.'" },';
+        .'", "URL": "'.$url.'" },';
 
 }
 
